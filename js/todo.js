@@ -1,3 +1,4 @@
+//api.jquery.com
 $(document).ready(function () {
 	//All our jQuery code goes inside the document ready event
 	
@@ -15,7 +16,26 @@ $(document).ready(function () {
 	*/
 	
 	$('a').on('click', function (ev) {
+		/*
+			`.preventDefault()` will stop HTML elements from doing what they normally do 
+			-For links it will stop them from going to another page
+			-For forms it will stop them from submitting
+		*/
+		ev.preventDefault();
 		console.log('Hello');
+		
+		/*
+			`$(this)` gives us reference to the element this event listener is attached to
+			`.attr()` lets us set element attributes
+		*/
+		console.log($(this).attr('href'));
+		/*
+			With `.style()` we can get and set CSS properties
+			The CSS property name (the 1st argument) is identical to how you'd write it in CSS
+		*/
+		
+		$(this).css('background-color', '#f33');
+		
 	});
 	
 		
