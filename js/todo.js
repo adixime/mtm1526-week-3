@@ -38,5 +38,17 @@ $(document).ready(function () {
 		
 	});
 	
+	$('form').on('submit', function (ev) {
+		ev.preventDefault();
 		
+		var newLi = $(document.createElement('li'));
+		if ($('#item').val() != '') {
+			newLi.html($('#item').val());
+			$('ul').append(newLi);
+			$('#item').val('');
+		}
+		
+		
+	});
+			
 });
