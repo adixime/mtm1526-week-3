@@ -50,7 +50,8 @@ $(document).ready(function () {
 	});
 	
 	$('ul').on('click', 'li', function (ev) {
-		$(this).addClass('done');
+		//$(this).addClass('done');
+		$(this).toggleClass('done');
 	});
 			
 });
