@@ -47,8 +47,10 @@ $(document).ready(function () {
 			$('ul').append(newLi);
 			$('#item').val('');
 		}
-		
-		
+	});
+	
+	$('ul').on('click', 'li', function (ev) {
+		$(this).addClass('done');
 	});
 			
 });
